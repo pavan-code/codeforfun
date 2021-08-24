@@ -1,0 +1,15 @@
+<div class="login container">
+    <div class="username">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" [(ngModel)]="username">
+    </div>
+    <div class="password">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" [(ngModel)]="password">
+    </div>
+    <div class="duration">
+        <label for="duration">Session Duration</label>
+        <input type="number" name="duration" id="duration" [(ngModel)]="duration" placeholder="duration in seconds">
+    </div>
+    <button type="button" (click)="login()">Login</button>
+</div>

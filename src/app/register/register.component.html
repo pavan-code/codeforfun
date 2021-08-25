@@ -8,11 +8,12 @@
     <div *ngIf = "!show">
       <div style="text-align: center;">
         <h1>Register and get your seat reserved</h1>
+        <small>We'll reach out to you once you register</small>
         <hr>
       </div>
     </div>
-    
     <mat-card-content *ngIf = "!show">
+      <!-- {{register.value | json}} -->
      
       <form  action="" [formGroup]="register">
         <div class="name">
@@ -158,10 +159,18 @@
             placeholder="Type your queries here"
           ></textarea>
         </div>
-        
+        <div class="last">
+          <div>
+            <mat-checkbox formControlName="asset"><b>I have a working Laptop/PC</b></mat-checkbox>
+            <!-- <p><b>Do you have a working Laptop/PC? </b> </p>
+            <mat-radio-group formControlName="asset" class="form-group buttons">
+              <mat-radio-button value="yes">Yes</mat-radio-button> &nbsp; &nbsp;
+              <mat-radio-button value="no">No</mat-radio-button>
+            </mat-radio-group> -->
+          </div>
+          <button type="button" color="primary" [disabled]="register.invalid || courses.length == 0" mat-raised-button (click)="signup()">Register</button>
+        </div>
       </form>
-      <button color="primary" [disabled]="register.invalid" mat-raised-button (click)="signup()">Register</button>
     </mat-card-content>
   </mat-card>
-  <br><br>
 </div>

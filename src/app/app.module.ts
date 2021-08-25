@@ -1,3 +1,5 @@
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -21,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { ModalComponent } from './modal/modal.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import { ModalComponent } from './modal/modal.component';
     LoginComponent,
     
     RegisterComponent,
-    ModalComponent
+    ModalComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +42,10 @@ import { ModalComponent } from './modal/modal.component';
     MatIconModule,
     HttpClientModule,
     MatCardModule,
+    MatRadioModule,
     MatChipsModule,
     AppRoutingModule,
+    MatCheckboxModule,
     MatDialogModule,
     MatSnackBarModule,
     BrowserAnimationsModule,

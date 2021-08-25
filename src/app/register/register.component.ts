@@ -76,9 +76,10 @@ export class RegisterComponent implements OnInit {
       mobilenumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       city: ['', [Validators.required]],
       state: ['', [Validators.required]],
-      courses: [this.courses],
+      courses: [this.courses ],
       queries: ['', ],
       pincode: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]],
+      asset: [false, [Validators.required]],
     })
     this.register.valueChanges.subscribe(data => this.onValueChanged(data))
   }
@@ -121,10 +122,12 @@ export class RegisterComponent implements OnInit {
     this.show = true
     let data = this.register.value;
     let c = ""
-    for(var i=0; i<this.courses.length-1; i++) {
+    for(var i=0; i<this.courses.length; i++) {
       c += this.courses[i] + ",";
     }
-    c+= this.courses[this.courses.length-1]
+    
+    c+= data.asset
+    delete data.asset;
     data.courses = c;
     console.log(data);
     
@@ -143,6 +146,17 @@ export class RegisterComponent implements OnInit {
           this.ngOnInit();
         })
       }
-    }, err => console.log(err))
+    }, err => {
+      console.log(err)  
+      this.snackbar.open(err.error.error, "", {
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+        duration: 2000,
+        panelClass: ['red-snackbar']
+      })  
+      setTimeout(() => {
+        this.show = false;
+      }, 2000);
+    })
   }
 }

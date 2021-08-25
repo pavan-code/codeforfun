@@ -5,15 +5,25 @@
     /* height: auto; */
     overflow-y: hidden
 }
+h1 {
+    margin: 0;
+
+}
+
 mat-card {
     width: 40vw;
     /* margin: 0px auto; */
     position: absolute;
     left: 78%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 5%;
+    transform: translateX(-50%);
     border-radius: 10px;
     box-shadow: 10px gray;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
 }
 label {
     font-size: 14px;
@@ -51,7 +61,7 @@ form {
     margin: 0 auto;
     
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     mat-card {
         width: 90%;
         position: absolute;

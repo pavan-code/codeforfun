@@ -32,7 +32,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px;
+    margin-right: 20px;
 }
 .right {
     display: flex;
@@ -97,14 +97,17 @@ form {
     margin: 0 auto;
     
 }
+.courses {
+    display: flex; flex-direction: row; justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
     .register {
-        width: 90%;
-        position: absolute;
-        left: 50%;
+        width: 100%;
+        /* position: absolute; */
+        /* left: 50%;
         top: 45%;
-        transform: translate(-50%, -20%);
-        border: 1px solid gray;
+        transform: translate(-50%, -20%); */
+        /* border: 1px solid gray; */
     }
     .name, .address, .contact {
         display: flex;
@@ -112,12 +115,28 @@ form {
         align-items: center;
         justify-content: space-between;
     }
+    .left, .right {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .left mat-card {
+        margin: 10px 0 10px 0;
+    }
+    .courses {
+        text-align: center;
+        display: flex; flex-direction: column; justify-content: space-between;
+    }
     .form-group {
         /* height: 86px; */
         width: 100%;
     }
     .container {
         height: 200% !important;
-        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        /* background-color: lightgray; */
     }
 }

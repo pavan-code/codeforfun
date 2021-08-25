@@ -1,21 +1,27 @@
-div {
-    /* background: url(../assets/bg.jpg) no-repeat; */
-    /* background-position: center top;
-    background-size: 100% auto; */
-    /* z-index: 10; */
-    /* width: 100vw; */
-    overflow-y: hidden;
-    /* background-repeat: repeat-y; */
-    height: 100% !important;
+.main {
+   
+    /* background: url(../assets/bg.jpg) no-repeat;
+    background-position: center top;
+    background-size: 100% auto; 
+    z-index: 10;
+    width: 100vw; */
+    overflow-x: hidden;
+    
+    /* height: 100% !important; */
 }
 img {
     width: 100%;
+    /* z-index: -3; */
     /* height: 50%; */
 }
+app-register {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    /* left: 0; */
+}
 @media screen and (min-width: 768px) {
-    div {        
-        height: 200vh;
-    }
+    
     img {
         width: 100%;
         height: auto

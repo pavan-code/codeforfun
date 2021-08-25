@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; overflow-x: hidden;
+    
+        zoom: 99%; /* Webkit browsers */
+     }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
 .red-snackbar {
     background-color: #f44336;
     color: #fff;
